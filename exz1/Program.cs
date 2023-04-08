@@ -26,12 +26,13 @@ void PrintArray(int[] array)
     }
     System.Console.WriteLine();
 }
+
 int pozitive(int[] array)
 {
     int hetn = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (hetn == array[i] / 2)
+        if (array[i] % 2 == 0)
             hetn++;
     }
     return hetn;
