@@ -27,15 +27,26 @@ void PrintArray(int[] array)
     System.Console.WriteLine();
 }
 
+int MAXIM(int[] array)
+{
+    int max = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max)
+            max = array[i];
+    }
+    return max;
+}
+
 int MINIM(int[] array)
 {
-    int min = 0;
+    int min = 2;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] < min)
-        min = array[i];
+            min = array[i];
     }
-    return MINIM;
+    return min;
 }
 
 int len = ReadInt("Введите длину массива");
@@ -44,5 +55,9 @@ int maxRnd = ReadInt("Введите границу максимума случ�
 int[] array = CreateArray(len, minRnd, maxRnd);
 PrintArray(array);
 int per;
-per = MINIM(array);
-System.Console.WriteLine($"Минимальное значение {per}");
+per = MAXIM(array);
+System.Console.WriteLine($"Максимальное значение {per}");
+int per1;
+per1 = MINIM(array);
+System.Console.WriteLine($"Минимальное значение {per1}");
+System.Console.WriteLine($"Разница максимального и минимального равняется {per - per1} ");
