@@ -44,5 +44,4 @@ int[] array = CreateArray(len, minRnd, maxRnd);
 PrintArray(array);
 int per;
 per = pozitive(array);
-System.Console.WriteLine($"Количество положительных числе в массиве  ");
-System.Console.WriteLine($"{per}");
+System.Console.WriteLine($"Количество положительных числе в массиве {per} ");

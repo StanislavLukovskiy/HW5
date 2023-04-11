@@ -1,7 +1,6 @@
-﻿// Задайте одномерный массив, заполненный случайными числами. 
-// Найдите сумму элементов, стоящих на нечётных позициях.
-// [3, 7, 23, 12] -> 19
-// [-4, -6, 89, 6] -> 0
+﻿// Задайте массив вещественных чисел. 
+// Найдите разницу между максимальным и минимальным элементов массива.
+// [3 7 22 2 78] -> 76
 
 int ReadInt(string msg)
 {
@@ -28,20 +27,22 @@ void PrintArray(int[] array)
     System.Console.WriteLine();
 }
 
-int negativSum(int[] array)
+int MINIM(int[] array)
 {
-    int sum = 0;
-    for (int i = 0; i < array.Length; i+=2)
+    int min = 0;
+    for (int i = 0; i < array.Length; i++)
     {
-        sum = sum + array [i];
+        if (array[i] < min)
+        min = array[i];
     }
-    return sum;
+    return MINIM;
 }
+
 int len = ReadInt("Введите длину массива");
 int minRnd = ReadInt("Введите границу минимума случайной ведичины");
 int maxRnd = ReadInt("Введите границу максимума случайной ведичины");
 int[] array = CreateArray(len, minRnd, maxRnd);
 PrintArray(array);
 int per;
-per = negativSum(array);
-System.Console.WriteLine($"Сумма чисел на нечётных позициях в массиве {per} ");
+per = MINIM(array);
+System.Console.WriteLine($"Минимальное значение {per}");
